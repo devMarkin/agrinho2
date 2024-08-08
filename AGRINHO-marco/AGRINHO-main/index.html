@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhores Formas de Plantio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="openTab('home', this)">Página Inicial</a></li>
+                <li><a href="#calculator" onclick="openTab('calculator', this)">Calculadora de Plantio</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="logofundo">
+        <img src="img/logomarca2.png" alt="logo" class="logo">
+    </div>
+
+    <main>
+        <section id="home" class="tab-content">
+            <h2>Bem-vindo ao nosso site!</h2>
+            <p>Aqui você encontra as melhores formas de plantio e os principais produtos comercializados atualmente.</p>
+            <h3>Formas de Plantio</h3>
+            <div class="planting-method">
+                <img src="img/plantio direto.png" alt="Plantio Direto">
+                <h4>Plantio Direto</h4>
+                <p>O plantio direto é um método de cultivo que dispensa o revolvimento do solo. As sementes são
+                    plantadas diretamente na palha da cultura anterior, mantendo a cobertura do solo e reduzindo a
+                    erosão.</p>
+            </div>
+            <div class="planting-method">
+                <img src="img/rotacao de culturas.png" alt="Rotação de Culturas">
+                <h4>Rotação de Culturas</h4>
+                <p>A rotação de culturas envolve alternar diferentes tipos de plantas em uma mesma área ao longo do
+                    tempo. Isso ajuda a melhorar a fertilidade do solo, controlar pragas e reduzir doenças.</p>
+            </div>
+            <div class="planting-method">
+                <img src="img/consorciacao.jpg" alt="Consorciação de Culturas">
+                <h4>Consorciação de Culturas</h4>
+                <p>A consorciação de culturas é a prática de plantar duas ou mais culturas simultaneamente na mesma
+                    área. Essa técnica pode maximizar o uso do solo e melhorar a biodiversidade agrícola.</p>
+            </div>
+
+            <h3>Principais Produtos Comercializados</h3>
+            <div class="product">
+                <img src="img/milho.jpeg" alt="Milho">
+                <h4>Milho</h4>
+                <p><strong>Vantagens:</strong> Alta produtividade, versatilidade no uso (alimentação humana e animal,
+                    biocombustível). <br>
+                    <strong>Desvantagens:</strong> Exige alta fertilidade do solo, susceptível a pragas.<br>
+                    <strong>Melhores datas para plantio:</strong> Outubro a Dezembro (safra principal), Fevereiro a
+                    Abril (safrinha).<br>
+                    <strong>Tempo para colheita:</strong> 120 a 150 dias após o plantio.<br>
+                    <strong>Dicas de plantio:</strong>
+                <ul>
+                    <li><strong>Fertilização:</strong> Uso de adubos nitrogenados e fosfatados.</li>
+                    <li><strong>Irrigação:</strong> Necessidade de irrigação regular durante o crescimento.</li>
+                    <li><strong>Colheita:</strong> Colher quando os grãos estiverem secos e duros.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="product">
+                <img src="img/soja.jpg" alt="Soja">
+                <h4>Soja</h4>
+                <p><strong>Vantagens:</strong> Alta demanda no mercado, fixa nitrogênio no solo.<br>
+                    <strong>Desvantagens:</strong> Exige rotação de culturas, susceptível a doenças.<br>
+                    <strong>Melhores datas para plantio:</strong> Outubro a Novembro.<br>
+                    <strong>Tempo para colheita:</strong> 100 a 130 dias após o plantio.<br>
+                    <strong>Dicas de plantio:</strong>
+                <ul>
+                    <li><strong>Fertilização:</strong> Uso de inoculantes para fixação biológica de nitrogênio.</li>
+                    <li><strong>Irrigação:</strong> Monitorar a umidade do solo, principalmente no florescimento.</li>
+                    <li><strong>Colheita:</strong> Colher quando as vagens estiverem marrons e secas.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="product">
+                <img src="img/trigo.jpg" alt="Trigo">
+                <h4>Trigo</h4>
+                <p><strong>Vantagens:</strong> Boa adaptabilidade a diferentes climas, uso diversificado (farinhas,
+                    ração animal).<br>
+                    <strong>Desvantagens:</strong> Exigente em nutrientes, susceptível a doenças fúngicas.<br>
+                    <strong>Melhores datas para plantio:</strong> Maio a Julho.<br>
+                    <strong>Tempo para colheita:</strong> 120 a 150 dias após o plantio.<br>
+                    <strong>Dicas de plantio:</strong>
+                <ul>
+                    <li><strong>Fertilização:</strong> Uso de adubos nitrogenados, potássicos e fosfatados.</li>
+                    <li><strong>Irrigação:</strong> Importante na fase inicial e durante o enchimento dos grãos.</li>
+                    <li><strong>Colheita:</strong> Colher quando as espigas estiverem maduras e secas.</li>
+                </ul>
+                </p>
+            </div>
+        </section>
+
+        <section id="calculator" class="tab-content">
+            <h2>Calculadora de Plantio</h2>
+            <form id="plantioForm">
+                <label for="area">Área de Plantio:</label>
+                <input type="number" id="area" name="area" step="0.01" required>
+                <select id="unit" name="unit" required>
+                    <option value="m2">Metros Quadrados (m²)</option>
+                    <option value="ha">Hectares (ha)</option>
+                    <option value="alq">Alqueires (alq)</option>
+                </select><br>
+        
+                <label for="crop">Tipo de Plantação:</label>
+                <select id="crop" name="crop" required>
+                    <option value="milho">Milho</option>
+                    <option value="soja">Soja</option>
+                    <option value="trigo">Trigo</option>
+                </select><br>
+        
+                <label for="cost">Gastos por unidade de área (R$):</label>
+                <input type="number" id="cost" name="cost" step="0.01" required><br>
+        
+                <label for="saca">Valor da Saca (R$):</label>
+                <input type="number" id="saca" name="saca" step="0.01" required><br>
+        
+                <button type="submit">Calcular</button>
+            </form>
+            <div id="result"></div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Sobre</h2>
+                <p>Esse site foi confeccionado para participar do concurso Agrinho 2024.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contato</h2>
+                <p>Aluno: Marco Antonio Cordeiro de Goes</p>
+                <p>Email: marco.goes@escola.pr.gov.br</p>
+                <p>Telefone: (45) 98823-5193</p>
+                <p>Endereço: Rua Travessa Cuiabá, 293, Marechal Cândido Rondon, PR</p>
+                <p>Endereço Colégio Monteiro Lobato: Rua das Canelas, 295, Marechal Cândido Rondon, PR</p>
+            </div>
+            <div class="footer-section social">
+                <h2>Siga nosso colégio!</h2>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://www.instagram.com/monteirolobato295/"><i class="fab fa-instagram"></i>
+                        Instagram</a>
+                    <a href="https://sites.google.com/escola.pr.gov.br/monteirolobatomcr/p%C3%A1gina-inicial"><i
+                            class="fas fa-globe"></i> Site do Colégio</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="footer-bottom">
+            &copy; Concurso Agrinho 2024 | Marco Antonio Cordeiro de Goes
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
